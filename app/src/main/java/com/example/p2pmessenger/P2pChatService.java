@@ -49,7 +49,7 @@ public class P2pChatService extends Service implements WifiP2pManager.PeerListLi
                 break;
             case "CONNECTION_CHANGED":
                 Log.d("P2P", "Request conn info");
-                this.Appication.P2pHandler.Manager.requestConnectionInfo(this.Application.P2pHandler.Channel, this);
+                this.Application.P2pHandler.Manager.requestConnectionInfo(this.Application.P2pHandler.Channel, this);
                 break;
             default:
                 break;
@@ -93,7 +93,7 @@ public class P2pChatService extends Service implements WifiP2pManager.PeerListLi
             for (WifiP2pDevice p2pDevice : P2pChatService.this.Devices) {
                 ClientInfo comparable = ClientInfo.GetComparable(p2pDevice.deviceAddress);
                 PeerDevice device = new PeerDevice(p2pDevice, P2pChatService.this.Clients.contains(comparable));
-                device.add(device);
+                devices.add(device);
             }
             return devices;
         }
@@ -139,7 +139,7 @@ public class P2pChatService extends Service implements WifiP2pManager.PeerListLi
 
         public boolean sendMessage(ChatMessage message) {
             if (P2pChatService.this.isConnected()) {
-                P2pChatService.this.connection.SendMessage(message);
+                P2pChatService.this.Connection.SendMessage(message);
                 return true;
             } else {
                 return false;

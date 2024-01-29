@@ -1,6 +1,6 @@
 package com.example.p2pmessenger.connection;
 
-import android.graphics.Paint;
+//import android.graphics.Paint;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,9 +16,9 @@ import com.example.p2pmessenger.data.BaseMessage;
 import com.example.p2pmessenger.ReceiveCallback;
 import com.example.p2pmessenger.data.JoinMessage;
 import com.example.p2pmessenger.data.LeaveMessage;
-import com.example.p2pmessenger.data.ChatMessage;
+//import com.example.p2pmessenger.data.ChatMessage;
 
-public class ChatServer {
+public class ChatServer extends ChatConnection {
 
     private Thread ServerThread;
     private ServerSocket ServerSocket;

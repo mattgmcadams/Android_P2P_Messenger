@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">P2P Messenger</string>
+    <string name="open_peer_discovery">Open peer discovery</string>
+    <string name="no_peers_connected">No peers connected!</string>
+    <string name="no_messages_found">No messages found!</string>
+    <string name="send">Send</string>
+    <string name="discover_peers">Discover peers</string>
+
+    <string-array name="error_messages">
+        <item>No peers connected</item>
+        <item>Wifi direct disabled</item>
+    </string-array>
 </resources>
