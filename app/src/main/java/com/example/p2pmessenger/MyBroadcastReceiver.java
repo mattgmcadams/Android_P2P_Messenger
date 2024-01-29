@@ -6,11 +6,11 @@ import android.net.wifi.p2p.WifiP2pManager;
 
 public class MyBroadcastReceiver extends android.content.BroadcastReceiver {
 
-    MainActivity activity;
+    ChatActivity activity;
     WifiP2pManager manager;
     WifiP2pManager.Channel channel;
 
-    MyBroadcastReceiver(WifiP2pManager manager, WifiP2pManager.Channel channel, MainActivity activity) {
+    MyBroadcastReceiver(WifiP2pManager manager, WifiP2pManager.Channel channel, ChatActivity activity) {
         this.manager = manager;
         this.channel = channel;
         this.activity = activity;
